@@ -39,12 +39,12 @@ function setup() {
   chartH = height * 0.9;
 }
 
-// funzione che apre la pagina di dettaglio
+// PARTE CAMBIO URL PER VISIONE DI DETTAGLIO
+
 function mousePressed() {
-  if (hovered) {
-    let myUrl = 'detail.html?id=' + encodeURIComponent(hovered.id);
-    window.location.href = myUrl;
-  }
+  // crea url da aprire //encodeURIComponent risolve i problemi degli spazi
+  let myUrl = 'detail.html?name=' + encodeURIComponent(hovered.name);
+  window.location.href = myUrl;
 }
 
 function draw() {
